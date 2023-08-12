@@ -2,6 +2,7 @@
 import { peliculas } from "./InfoPelis.js";
 // importar elementos que complementan
 // JavaScript
+// seccion de peliculas
 const section = document.getElementById('peliculas');
 const crear = () => {
     const divGeneral = document.createElement('div');
