@@ -69,7 +69,7 @@ peliculas.forEach(element => {
 })
 
 leerMasyMenos()
-// btnLookT();
+btnLookT();
 // buscarElemento();
 function leerMasyMenos() {
     matriz.forEach(elemento => {
