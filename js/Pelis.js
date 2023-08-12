@@ -1,6 +1,6 @@
 import { buscarElemento } from "./Busquedas.js";
 import { peliculas } from "./InfoPelis.js";
-
+// importar elementos que complementan
 // JavaScript
 const section = document.getElementById('peliculas');
 const crear = () => {
