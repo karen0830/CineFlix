@@ -1,4 +1,4 @@
-import { buscarElemento } from "./Busquedas.js";
+// import { buscarElemento } from "./Busquedas.js";
 import { peliculas } from "./InfoPelis.js";
 // importar elementos que complementan
 // JavaScript
