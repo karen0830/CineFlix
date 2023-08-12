@@ -1,15 +1,13 @@
-// import { buscarElemento } from "./Busquedas.js";
-import { peliculas } from "./InfoPelis.js";
-// importar elementos que complementan
-// JavaScript
-// seccion de peliculas
-const section = document.getElementById('peliculas');
-const crear = () => {
+// import { buscarElemento } from "../Busquedas.js";
+import { seriesInfo } from "./InfoSeries.js";
+const series = document.getElementById('series');
+
+const crearSeries = (serieData) => {
     const divGeneral = document.createElement('div');
     divGeneral.id = 'divGeneral';
 
-    const button = document.createElement('button')
-    button.id = 'button'
+    const button = document.createElement('button');
+    button.id = 'button';
 
     const buttonLook = document.createElement('button')
     buttonLook.id = 'buttonLook'
@@ -23,75 +21,77 @@ const crear = () => {
 
     const img = document.createElement('img');
     img.id = 'img2';
+    img.src = serieData.imagen; // Concatenar el 'poster_path' con la base URL de las imágenes
 
     const h1 = document.createElement('h4');
     h1.id = 'h4';
+    h1.textContent = serieData.titulo; // Asigna el nombre de la serie desde los datos obtenidos de la API
 
     const descripcion = document.createElement('p');
     descripcion.id = 'description';
+    descripcion.textContent = serieData.descripcion; // Asigna la descripción de la serie desde los datos obtenidos de la API
 
-    const leermas = document.createElement('button')
+    const leermas = document.createElement('button');
     leermas.id = 'leermas';
     leermas.textContent = 'Leer Más';
 
-    const div2 = document.createElement('div')
-    div2.id = 'div2'
+    const div2 = document.createElement('div');
+    div2.id = 'div2';
 
     div2.appendChild(descripcion);
-    div2.appendChild(leermas)
+    div2.appendChild(leermas);
 
     div.appendChild(h1);
     div.appendChild(div2);
 
-    divGeneral.appendChild(img)
+    divGeneral.appendChild(img);
     divGeneral.appendChild(div);
     divGeneral.appendChild(buttonLook)
 
-    button.appendChild(divGeneral)
+    button.appendChild(divGeneral);
 
-    section.appendChild(button)
-
-    let key = 0;
-    let array = [div, divGeneral, img, h1, descripcion, section, leermas, div2, buttonLook, key];
+    series.appendChild(button);
+    let key = serieData.trailer;
+    let array = [div, divGeneral, img, h1, descripcion, series, leermas, div2, buttonLook, key];
     return array
-}
+};
 
-let matriz = [];
+let matriz2 = [];
 let i = 0;
-peliculas.forEach(element => {
-    let array = crear();
-    array[2].src = element.imagen;
-    array[3].textContent = element.titulo;
-    array[4].textContent = element.descripcion;
-    array[9] = element.trailer;
+seriesInfo.forEach(element => {
+    let array = crearSeries(element);
     console.log(array[9]);
-    matriz.push(array)
+    matriz2.push(array)
     i++;
 })
 
-leerMasyMenos()
-btnLookT();
+btnLookT()
+leerMasyMenos2();
 // buscarElemento();
-function leerMasyMenos() {
-    matriz.forEach(elemento => {
-        elemento[6].addEventListener('click', () => {
-            if (elemento[6].textContent == 'Leer Más') {
-                elemento[7].style = 'flex-direction: column;'
-                elemento[4].style = 'overflow: visible; width: 100%; white-space: wrap; '; // Cambia el overflow para que se muestre todo el texto
-                elemento[6].textContent = 'Leer Menos'
-                elemento[6].style = 'display: block; text-align: start;'; // Oculta el botón "Leer más" después de expandir el texto
-            } else {
-                elemento[4].style = 'white-space: nowrap; overflow: hidden; text-overflow: ellipsis;'
-                elemento[7].style = 'flex-direction: wrap;'
-                elemento[6].textContent = 'Leer Más'
-            }
-        });
-    })
+
+console.log(matriz2);
+function leerMasyMenos2() {
+    matriz2
+        .forEach(elemento => {
+            elemento[6].addEventListener('click', () => {
+                console.log(elemento[6].textContent);
+                if (elemento[6].textContent == 'Leer Más') {
+                    elemento[7].style = 'flex-direction: column;'
+                    elemento[4].style = 'overflow: visible; width: 100%; white-space: wrap; '; // Cambia el overflow para que se muestre todo el texto
+                    elemento[6].textContent = 'Leer Menos'
+                    elemento[6].style = 'display: block; text-align: start;'; // Oculta el botón "Leer más" después de expandir el texto
+                } else if (elemento[6].textContent == "Leer Menos") {
+                    elemento[4].style = 'white-space: nowrap; overflow: hidden; text-overflow: ellipsis;'
+                    elemento[7].style = 'flex-direction: wrap;'
+                    elemento[6].textContent = 'Leer Más'
+                }
+            });
+        })
 }
 
 // button look
 export function btnLookT() {
-    matriz.forEach(elemento => {
+    matriz2.forEach(elemento => {
         elemento[8].addEventListener('click', () => {
             openModal(elemento[9]);
         });
@@ -169,5 +169,3 @@ const cardTrailer = () => {
 }
 // Trailer
 cardTrailer();
-
-// trabajo hecho por Daniela osorio Alejandro osorio y karen López
