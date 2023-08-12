@@ -1,5 +1,5 @@
 // import { buscarElemento } from "../Busquedas.js";
-// import { peliculas } from "../Peliculas/InfoPelis.js";
+import { peliculas } from "./InfoPelis.js";
 
 // JavaScript
 const section = document.getElementById('peliculas');
