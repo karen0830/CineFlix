@@ -170,3 +170,4 @@ const cardTrailer = () => {
 // Trailer
 // cardTrailer();
 
+// trabajo hecho por Daniela osorio Alejandro osorio y karen López
