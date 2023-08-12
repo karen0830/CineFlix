@@ -1,4 +1,4 @@
-// import { buscarElemento } from "../Busquedas.js";
+import { buscarElemento } from "./Busquedas.js";
 import { peliculas } from "./InfoPelis.js";
 
 // JavaScript
@@ -70,7 +70,7 @@ peliculas.forEach(element => {
 
 leerMasyMenos()
 btnLookT();
-// buscarElemento();
+buscarElemento();
 function leerMasyMenos() {
     matriz.forEach(elemento => {
         elemento[6].addEventListener('click', () => {
