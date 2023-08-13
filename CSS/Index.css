@@ -248,3 +248,107 @@ iframe {
   height: 100%;
   border: none;
 }
+
+@media screen and (max-width: 480px) {
+  body {
+      grid-template-columns: 100%;
+  }
+
+  header {
+      width: 100%;
+  }
+
+  nav {
+      padding-left: 10px;
+  }
+
+  #peliculas {
+      padding: 10px;
+      gap: 10px;
+  }
+
+  #divGeneral {
+      width: 100%;
+  }
+
+  #description {
+      width: 100%;
+      white-space: normal;
+      text-align: center;
+  }
+
+  .search {
+      width: 100%;
+      margin-left: 10px;
+  }
+}
+
+/* Responsive for 768px */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  body {
+      grid-template-columns: 30% 70%;
+  }
+
+  header {
+      width: 30%;
+  }
+
+  nav {
+      padding-left: 15px;
+  }
+
+  #peliculas {
+      padding: 15px;
+      gap: 15px;
+  }
+
+  #divGeneral {
+      width: 100%;
+  }
+
+  #description {
+      width: 100%;
+      white-space: normal;
+      text-align: center;
+  }
+
+  .search {
+      width: 100%;
+      margin-left: 15px;
+  }
+}
+
+/* Responsive for 1200px */
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  body {
+      grid-template-columns: 25% 75%;
+  }
+
+  header {
+      width: 25%;
+  }
+
+  nav {
+      padding-left: 20px;
+  }
+
+  #peliculas {
+      padding: 20px;
+      gap: 20px;
+  }
+
+  #divGeneral {
+      width: 100%;
+  }
+
+  #description {
+      width: 100%;
+      white-space: normal;
+      text-align: center;
+  }
+
+  .search {
+      width: 100%;
+      margin-left: 20px;
+  }
+}
