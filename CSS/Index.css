@@ -228,9 +228,8 @@ input {
   background-color: black;
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  width: 45%;
-  max-height: 50vh;
-  overflow-y: auto;
+  width: 70%;
+  height: 70vh;
 }
 
 .close-button {
