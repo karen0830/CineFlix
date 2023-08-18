@@ -1,4 +1,7 @@
+import { peliculas } from "./InfoPelis.js";
+
 // Función para mostrar solo los elementos que coincidan con el término de búsqueda
+
 const filtrarPeliculas = (term) => {
     const section = document.getElementById('general');
     const peliculas = section.getElementsByTagName('div');

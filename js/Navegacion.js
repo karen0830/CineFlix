@@ -23,9 +23,9 @@ const h4SeriesM = document.getElementById('sectionSeries');
 const seriesC = document.getElementById('series');
 function condicionButton(i) {
     if(arrayA[i] == button0){
-        h4peliculas.style.display = "block"
+        h4peliculas.style.display = "flex"
         films.style.display = "flex"
-        h4SeriesM.style.display = "block"
+        h4SeriesM.style.display = "flex"
         seriesC.style.display = "flex"
     }else if(arrayA[i] == button1){
         h4SeriesM.style.display = "none"
