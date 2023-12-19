@@ -1,5 +1,5 @@
 import { peliculas } from "./InfoPelis.js";
-let buttonTrailer = document.queryselectorAll('.buttonLook');
+let buttonTrailer = document.queryselectorAll('#buttonLook');
 let button = buttonTrailer.addEventListener('click', function () {
     let main = document.querySelectorAll('main');
     const Alert = document.createElement('div');
