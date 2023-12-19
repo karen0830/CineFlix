@@ -3,6 +3,7 @@ let buttonTrailer = document.queryselectorAll('.buttonLook');
 let button = buttonTrailer.addEventListener('click', function () {
     let main = document.querySelectorAll('main');
     const Alert = document.createElement('div');
+    Alert.id= "divAlert";
     alert.id = "alert";
     const H1 = documet.createElement('h1');
     H1.innerText = "Usted va a ver el trailer";
