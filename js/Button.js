@@ -1,4 +1,12 @@
 import { peliculas } from "./InfoPelis.js";
+let button = addEventListener('click', function () {
+    let main = document.querySelectorAll('main');
+    const Alert = document.createElement('div');
+    const H1 = documet.createElement('h1');
+    H1.innerText = "Usted va a ver el trailer";
+    Alert.appendChild(H1);
+    main.appendChild(Alert);
+}
 
 function category() {
     let elements = document.querySelectorAll('.aCategory[category="todo"]');
